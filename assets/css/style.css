@@ -1,0 +1,1144 @@
+@charset "UTF-8";
+
+/* 文字コードの指定 */
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: url("../fonts/JosefinSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NotoSansJP-Medium";
+  src: url("../fonts/NotoSansJP-Medium.woff") format("woff");
+}
+
+/* PCページ全体 */
+body {
+  color: #6c757d;
+}
+
+p {
+  font-family: source-han-sans-japanese, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: 6.59vw;
+  font-family: "JosefinSans-Regular";
+}
+
+#header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12.52vw;
+  height: 6.59vw;
+}
+
+/* ロゴ */
+#logo {
+  /* アニメーションの変化時間 */
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+/* ナビゲーションのリンク */
+header.scroll-nav ul li a {
+  /* アニメーションの変化時間 */
+  transition: 0.5s;
+}
+
+/* PCナビゲーション */
+.openbtn {
+  display: none;
+}
+
+#g-nav {
+  display: none;
+}
+
+#navi-menu {
+  display: flex;
+}
+
+#navi-menu li {
+  padding-right: 3.15vw;
+  list-style: none;
+}
+
+#navi-menu li:last-child {
+  padding-right: 0;
+}
+
+#navi-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navi ul li.current a,
+#navi ul li a:hover {
+  color: #ff5766;
+}
+
+/* PCナビゲーションスクロール時 */
+header.scroll-nav {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.scroll-nav #navi-menu li a {
+  color: #212529;
+}
+
+#hamburger-button {
+  display: none;
+}
+
+header {
+  transition: 0.5s;
+}
+
+.scroll-nav #logo {
+  color: #212529;
+}
+
+/* ロゴ */
+#logo {
+  color: #fff;
+  font-size: 2.5vw;
+  letter-spacing: 0.5vw;
+  ;
+}
+
+/* ビジュアル */
+
+#particles-js {
+  z-index: -1;
+  /*描画を一番下に*/
+  width: 100%;
+  height: 66.84vw;
+  background-image: url("../img/main.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-position: center center;
+}
+
+.wrapper {
+  position: relative;
+  /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 1;
+  /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width: 100%;
+  height: 66.84vw;
+}
+
+.catch {
+  font-family: "JosefinSans-Regular";
+  color: #212529;
+  position: absolute;
+  top: 30vw;
+  left: 45vw;
+}
+
+.subcatch h2 {
+  font-family: "JosefinSans-Regular";
+  color: #212529;
+  position: absolute;
+  top: 38vw;
+  left: 25vw;
+}
+
+.subcatch h2 {
+  font-size: 4.39vw;
+}
+
+.TextTyping span {
+  display: none;
+}
+
+.TextTyping::after {
+  content: "|";
+  animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.welcom_catch {
+  display: block;
+  font-size: 2.93vw;
+  padding-bottom: 2.93vw;
+  text-align: center;
+}
+
+/*about*/
+.container {
+  padding: 70px 171px;
+  margin: 0 auto;
+}
+
+.gray-back {
+  background-color: #f7f7f7;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about_text {
+  padding-left: 48px;
+}
+
+.about_text h2 {
+  font-family: "JosefinSans-Regular";
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 13px;
+}
+
+.about_text h3 {
+  font-family: source-han-sans-japanese, sans-serif;
+  color: #212529;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about_text h3 span {
+  color: #ff5766;
+}
+
+.about_coding {
+  width: 35.07vw;
+  height: auto;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.about_text p {
+  line-height: 27px;
+}
+
+h2.container-title {
+  text-align: center;
+  font-size: 32px;
+  font-family: "JosefinSans-Regular";
+  color: #212529;
+  margin-bottom: 29px;
+}
+
+/* skillグラフ */
+.skillbar {
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+  width: 100%;
+  background: #eee;
+  height: 40px;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12) inset;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+  background: #6adcfa;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.skillbar-bar {
+  height: 40px;
+  width: 0px;
+  background: #6adcfa;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: #ffffff;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.skillbar-pink .skillbar-title {
+  background: #ff5766;
+}
+
+.skillbar-pink .skillbar-bar {
+  background: #ff5766;
+}
+
+.skillbar-yellow .skillbar-title {
+  background: #FEBB42;
+}
+
+.skillbar-yellow .skillbar-bar {
+  background: #FEBB42;
+}
+
+.skillbar-green .skillbar-title {
+  background: #0ecb73;
+}
+
+.skillbar-green .skillbar-bar {
+  background: #0ecb73;
+}
+
+.skillbar-blue .skillbar-title {
+  background: #189ad2;
+}
+
+.skillbar-blue .skillbar-bar {
+  background: #189ad2;
+}
+
+.skillbar-purple .skillbar-title {
+  background: #c70ec0;
+}
+
+.skillbar-purple .skillbar-bar {
+  background: #c70ec0;
+}
+
+.skillbar-black .skillbar-title {
+  background: #7f7e7e;
+}
+
+.skillbar-black .skillbar-bar {
+  background: #7f7e7e;
+}
+
+/* garally */
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 29px auto;
+}
+
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+  margin: 0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #ff5766;
+  /*ドットボタンの現在地表示の色*/
+}
+
+/*モーダル*/
+/*全て共通：hideエリアをはじめは非表示*/
+.hide-area {
+  display: none;
+}
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+/* works */
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works_contents {
+  width: calc((100% - 66px) / 3);
+  margin-right: 33px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.works_contents:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.works_icon {
+  text-align: center;
+}
+
+.icon_custom {
+  color: #ff5766;
+  font-size: 44px;
+  text-align: center;
+}
+
+.works_text {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.works_text h3 {
+  font-size: 16px;
+  color: #212529;
+}
+
+.works_text span {
+  display: block;
+  height: 2px;
+  width: 40px;
+  margin: 15px auto;
+  background-color: #ff5766;
+}
+
+.works_text p {
+  font-size: 14px;
+  text-align: left;
+}
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* blog */
+.hiromiBlog {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  align-items: baseline;
+}
+
+.blog_list {
+  text-align: center;
+  width: calc((100% - 66px) / 3);
+  height: auto;
+}
+
+.blog_list img {
+  width: 100%;
+  height: auto;
+}
+
+.blog_list h3 {
+  font-family: source-han-sans-japanese, sans-serif;
+  text-align: left;
+  color: #212529;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+
+.blog_list time {
+  text-align: right;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* contact */
+.container-title-contact {
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.container_contact {
+  margin: 0 auto;
+  background-image: url(../img/contact_bg.png);
+  background-image: center center;
+  background-size: cover;
+
+}
+
+.contact_form_area {
+  font-family: "JosefinSans-Regular";
+  padding: 40px 50px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255);
+  border: 1px solid #000000;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px 0 rgba(6, 6, 6, 0.909);
+  max-width: 725px;
+}
+
+.form_column {
+  display: flex;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.form_label {
+  color: #212529;
+  font-size: 16px;
+  margin-right: 30px;
+  width: 150px;
+}
+
+span.required {
+  color: #fff;
+  background-color: #989696;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px 7px;
+  font-size: 14px;
+  margin-right: 30px;
+  height: 34px;
+  line-height: 1;
+  width: 47px;
+  text-align: center;
+}
+
+.form_input {
+  color: #0ecb73;
+}
+
+.form_parts {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  width: 350px;
+  height: 61px;
+  border-radius: 7px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: "NotoSansJP-Medium";
+  padding-bottom: 3px;
+}
+
+.form_textarea {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  width: 350px;
+  height: 150px;
+  border-radius: 7px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: "NotoSansJP-Medium";
+  padding-top: 8px;
+}
+
+.form_column_textarea {
+  align-items: initial;
+}
+
+#form_submit {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  background-color: #ff5766;
+  color: #fff;
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  background-color: #212529;
+  padding: 20px 0 20px 0;
+  color: rgb(166, 160, 160);
+  font-family: "NotoSansJP-Medium";
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+footer ul a {
+  display: block;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.1;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #a8a698;
+  margin-bottom: 50px;
+}
+
+footer ul li {
+  margin-bottom: -40px;
+  margin-right: 30px;
+}
+
+footer ul li:last-child {
+  margin-right: 0px;
+}
+
+
+/* レスポンシブ（SP表示の指定） */
+@media (max-width: 1024px) {
+
+  /* SPページ全体 */
+  p {
+    font-size: 3.73vw;
+  }
+
+  /* ヘッダー */
+  header.scroll-navi-sp {
+    background-color: #fff;
+    height: 55px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #logo {
+    display: block;
+    color: #212529;
+    font-size: 27px;
+  }
+
+  #header-inner {
+    padding: 0 2.93vw;
+  }
+
+  #navi {
+    display: none;
+  }
+
+  .openbtn {
+    display: block;
+  }
+
+  #g-nav {
+    display: block;
+  }
+
+  /* ハンバーガーボタン */
+
+  /*========= ナビゲーションのためのCSS ===============*/
+
+  /*アクティブになったエリア*/
+  #g-nav.panelactive {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /*丸の拡大*/
+  .circle-bg {
+    position: fixed;
+    z-index: 3;
+    /*丸の形*/
+    width: 26.67vw;
+    height: 26.67vw;
+    border-radius: 50%;
+    background: #f2f2f2;
+    /*丸のスタート位置と形状*/
+    transform: scale(0);
+    /*scaleをはじめは0に*/
+    right: -13.33vw;
+    top: -13.33vw;
+    transition: all .6s;
+    /*0.6秒かけてアニメーション*/
+  }
+
+  .circle-bg.circleactive {
+    transform: scale(50);
+    /*クラスが付与されたらscaleを拡大*/
+  }
+
+  /*ナビゲーションの縦スクロール*/
+  #g-nav-list {
+    display: none;
+    /*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 26.67;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #g-nav.panelactive #g-nav-list {
+    display: block;
+    /*クラスが付与されたら出現*/
+  }
+
+  /*ナビゲーション*/
+  #g-nav ul {
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /*背景が出現後にナビゲーションを表示*/
+  #g-nav.panelactive ul {
+    opacity: 1;
+  }
+
+  /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+  #g-nav.panelactive ul li {
+    animation-name: gnaviAnime;
+    animation-duration: 1s;
+    animation-delay: .2s;
+    /*0.2 秒遅らせて出現*/
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes gnaviAnime {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  /*リストのレイアウト設定*/
+  #g-nav li {
+    text-align: center;
+    list-style: none;
+  }
+
+  #g-nav li a {
+    color: #212529;
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn {
+    position: fixed;
+    right: 10px;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*×に変化*/
+  .openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #212529;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  /*sp用メイン画像*/
+  #particles-js {
+    background-image: url("../img/main-sp.png");
+    width: 100vw;
+    height: 149.87vw;
+    background-size: cover;
+  }
+
+  /*sp用キャッチ*/
+  .catch {
+    top: 65vw;
+    left: 35vw;
+  }
+
+  .subcatch h2 {
+    top: 80vw;
+    left: 16vw;
+  }
+
+  .subcatch h2 {
+    font-size: 6vw;
+  }
+
+  .welcom_catch {
+    font-size: 7vw;
+    padding-bottom: 0vw;
+    text-align: center;
+  }
+
+  /*about*/
+  .container {
+    padding: 8vw 5.6vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about_text {
+    padding-left: 0;
+  }
+
+  .about_coding {
+    box-sizing: content-box;
+    width: 100%;
+    margin-top: 5.33vw;
+  }
+
+  .about_text h2 {
+    font-size: 6.5vw;
+    margin-bottom: 3.47vw;
+    text-align: center;
+  }
+
+  .about_text h3 {
+    font-size: 5vw;
+    margin-bottom: 5.33vw;
+    text-align: center;
+  }
+
+  .about_text h3 span {
+    color: #ff5766;
+  }
+
+  .about_text p {
+    line-height: 6.3vw;
+  }
+
+  /*skills*/
+  h2.container-title {
+    font-size: 6.5vw;
+  }
+
+  /*works*/
+  .works {
+    display: block;
+  }
+
+  .works_contents {
+    width: 100%;
+    margin-right: 0;
+    padding: 5.33vw;
+    margin-bottom: 3vw;
+  }
+
+  .icon_custom {
+    color: #ff5766;
+    font-size: 11.73vw;
+    text-align: center;
+  }
+
+  .works_text {
+    padding-top: 5.33vw;
+    text-align: center;
+  }
+
+  .works_text h3 {
+    font-size: 4.27vw;
+    color: #212529;
+  }
+
+  .works_text span {
+    display: block;
+    height: 0.53vw;
+    width: 10.67vw;
+    margin: 4vw auto;
+    background-color: #ff5766;
+  }
+
+  .works_text p {
+    font-size: 3.73vw;
+    line-height: 5vw;
+  }
+
+  /* blog */
+  .blog {
+    display: block;
+    padding: 0;
+  }
+
+  .blog_list {
+    width: 100%;
+    padding-bottom: 7vw;
+  }
+
+  .blog_list img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3vw;
+  }
+
+  .blog_list h3 {
+    font-size: 4.27vw;
+    letter-spacing: 0vw;
+  }
+
+  .blog_list time {
+    margin-top: 2vw;
+    font-size: 3.73vw;
+  }
+
+  /* contact */
+  .contact_form_area {
+    font-family: source-han-sans-japanese, sans-serif;
+    padding: 3vw 5.33vw;
+    margin: 0 auto;
+    padding-bottom: 10vw;
+  }
+
+  .container-title-contact {
+    margin-top: 1vw;
+    padding-bottom: 3vw;
+  }
+
+  .form_column {
+    display: block;
+    padding-bottom: 8vw;
+    align-items: center;
+  }
+
+  .form_label {
+    color: #212529;
+    font-size: 4.27vw;
+    margin-right: 3vw;
+    width: auto;
+    display: inline-block;
+  }
+
+  span.required {
+    border-radius: 1.07vw;
+    padding: 1.5vw 1.87vw;
+    font-size: 3.73vw;
+    margin-right: 0;
+    height: 8.53vw;
+    line-height: 1;
+    width: 12.53vw;
+  }
+
+  .form_input {
+    margin-top: 3vw;
+    ;
+  }
+
+  .form_parts {
+    background-color: #fff;
+    border: 0.27vw solid #e8e8e8;
+    width: 100%;
+    height: 16.27vw;
+    border-radius: 1.87vw;
+    padding-left: 5.33vw;
+    font-size: 4.27vw;
+    font-family: "NotoSansJP-Medium";
+    padding-bottom: 0.8vw;
+  }
+
+  .form_textarea {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    height: 30vw;
+    border-radius: 1.87vw;
+    padding-left: 5.33vw;
+    font-size: 4.27vw;
+    font-family: "NotoSansJP-Medium";
+    padding-top: 2.13vw;
+  }
+
+  #form_submit {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 5.33vw;
+    background-color: #ff5766;
+    color: #fff;
+    width: 40vw;
+    padding-top: 2.67vw;
+    padding-bottom: 2.67vw;
+    border-radius: 1.33vw;
+  }
+
+  /* フッター */
+  footer {
+    text-align: center;
+    background-color: #212529;
+    padding: 5vw 0 1vw 0;
+    color: rgb(166, 160, 160);
+    font-family: "NotoSansJP-Medium";
+  }
+
+  footer ul a {
+    margin-bottom: 2.67vw;
+  }
+
+  footer ul li {
+    margin-right: 8vw;
+  }
+}
